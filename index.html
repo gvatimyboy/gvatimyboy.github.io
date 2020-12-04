@@ -1,1 +1,42 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This is a simple static website built with HTML, CSS and JavaScript that features my education, experience and projects portfolio.">
+  <meta name="author" content="Timothée Barattin">
+  <title>Timothée Barattin's Portfolio</title>
+
+  <link href="css/style.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <header>
+    <picture class="photo">
+      <img src="img/basketball_scaled.png">
+    </picture>
+    <div class="title-container">
+      <h1 class="title">Timothée Barattin</h1>
+      <h2 class="subtitle">Industrial Engineer</h2>
+      <p id="age"></p>
+      <script>
+        const ageMs = Date.now() - new Date(1992, 5, 26);
+        const ageDate = new Date(ageMs);
+        const age = Math.abs(ageDate.getUTCFullYear() - 1970);
+        var ageParagraph = document.getElementById('age');
+        ageParagraph.innerHTML = age + 'y/o';
+      </script>
+      <p>Swiss & Italian</p>
+    </div>
+  </header>
+  <div class="content-container">
+
+  </div>
+  <footer>
+    <div class="copyrights-container">
+      © Timothée Barattin 2020
+    </div>
+  </footer>
+</body>
+</html>
+  
