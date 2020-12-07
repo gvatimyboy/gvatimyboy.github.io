@@ -7,13 +7,15 @@
   <meta name="author" content="Timothée Barattin">
   <title>Timothée Barattin's Portfolio</title>
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet"></link>
 </head>
 
 <body>
   <header class="header">
     <figure class="header__figure">
-      <img src="img/basketball_scaled.png">
+      <img src="assets/images/basketball_scaled.png">
       <figcaption class="header__figcaption">
         <h1 class="figcaption__title">Timothée Barattin</h1>
         <h2 class="figcaption__subtitle">Industrial Engineer</h2>
@@ -22,7 +24,7 @@
           const ageMs = Date.now() - new Date(1992, 5, 26);
           const ageDate = new Date(ageMs);
           const age = Math.abs(ageDate.getUTCFullYear() - 1970);
-          var ageParagraph = document.getElementById('age');
+          var ageParagraph = document.getElementById('figcaption__age');
           ageParagraph.innerHTML = age + 'y/o';
         </script>
         <p>Swiss & Italian</p>
