@@ -11,29 +11,129 @@
 </head>
 
 <body>
-  <header>
-    <picture class="photo">
+  <header class="header">
+    <figure class="header__figure">
       <img src="img/basketball_scaled.png">
-    </picture>
-    <div class="title-container">
-      <h1 class="title">Timothée Barattin</h1>
-      <h2 class="subtitle">Industrial Engineer</h2>
-      <p id="age"></p>
-      <script>
-        const ageMs = Date.now() - new Date(1992, 5, 26);
-        const ageDate = new Date(ageMs);
-        const age = Math.abs(ageDate.getUTCFullYear() - 1970);
-        var ageParagraph = document.getElementById('age');
-        ageParagraph.innerHTML = age + 'y/o';
-      </script>
-      <p>Swiss & Italian</p>
-    </div>
+      <figcaption class="header__figcaption">
+        <h1 class="figcaption__title">Timothée Barattin</h1>
+        <h2 class="figcaption__subtitle">Industrial Engineer</h2>
+        <p id="figcaption__age"></p>
+        <script>
+          const ageMs = Date.now() - new Date(1992, 5, 26);
+          const ageDate = new Date(ageMs);
+          const age = Math.abs(ageDate.getUTCFullYear() - 1970);
+          var ageParagraph = document.getElementById('age');
+          ageParagraph.innerHTML = age + 'y/o';
+        </script>
+        <p>Swiss & Italian</p>
+      </figcaption>
+    </figure>
   </header>
-  <div class="content-container">
 
-  </div>
-  <footer>
-    <div class="copyrights-container">
+  <main class="main">
+    <aside class="main__aside">
+      <section class="main__section introduction">
+        <details class="section__details">
+          <summary class="details__summary">
+            <h2 class="details__title"></h2>
+          </summary>
+          <article class="details__article">
+            <p class="article__description"></p>
+          </article>
+        </details>
+      </section>
+
+      <section class="main__section languages">
+        <details class="section__details">
+          <summary class="details__summary">
+            <h2 class="details__title"></h2>
+          </summary>
+          <article class="details__article">
+            <p class="article__description">
+              <mark class="article__subtitle"></mark>
+            </p>
+          </article>
+        </details>
+      </section>
+
+      <section class="main__section skills">
+        <details class="section__details">
+          <summary class="details__summary">
+            <h2 class="details__title"></h2>
+          </summary>
+          <article class="details__article">
+            <p class="article__description">
+              <mark class="article__subtitle"></mark>
+            </p>
+          </article>
+        </details>
+      </section>
+
+      <section class="main__section hobbies">
+        <details class="section__details">
+          <summary class="details__summary">
+            <h2 class="details__title"></h2>
+          </summary>
+          <article class="details__article">
+            <p class="article__description">
+              <mark class="article__subtitle"></mark>
+            </p>
+          </article>
+        </details>
+      </section>
+    </aside>
+
+    <section class="main__section experience">
+      <details class="section__details">
+        <summary class="details__summary">
+          <h2 class="details__title"></h2>
+        </summary>
+
+        <article class="details__article">
+          <time class="article__time"></time>
+          <p class="article__role">
+            <mark class="article__title"></mark>
+          </p>
+          <p class="article__description"></p>
+        </article>
+      </details>
+    </section>
+
+    <section class="main__section projects">
+      <details class="section__details">
+        <summary class="details__summary">
+          <h2 class="details__title"></h2>
+        </summary>
+
+        <article class="details__article">
+          <time class="article__time"></time>
+          <p class="article__role">
+            <mark class="article__title"></mark>
+          </p>
+          <p class="article__description"></p>
+        </article>
+      </details>
+    </section>
+
+    <section class="main__section education">
+      <details class="section__details">
+        <summary class="details__summary">
+          <h2 class="details__title"></h2>
+        </summary>
+
+        <article class="details__article">
+          <time class="article__time"></time>
+          <p class="article__role">
+            <mark class="article__title"></mark>
+          </p>
+          <p class="article__description"></p>
+        </article>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__copyrights">
       © Timothée Barattin 2020
     </div>
   </footer>
