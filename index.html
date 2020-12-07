@@ -14,22 +14,25 @@
 
 <body>
   <header class="header">
-    <figure class="header__figure">
-      <img src="assets/images/basketball_scaled.png">
-      <figcaption class="header__figcaption">
-        <h1 class="figcaption__title">Timothée Barattin</h1>
-        <h2 class="figcaption__subtitle">Industrial Engineer</h2>
-        <p id="figcaption__age"></p>
-        <script>
-          const ageMs = Date.now() - new Date(1992, 5, 26);
-          const ageDate = new Date(ageMs);
-          const age = Math.abs(ageDate.getUTCFullYear() - 1970);
-          var ageParagraph = document.getElementById('figcaption__age');
-          ageParagraph.innerHTML = age + 'y/o';
-        </script>
-        <p>Swiss & Italian</p>
-      </figcaption>
-    </figure>
+    <picture class="header__picture">
+      <img class="picture__image" src="assets/images/basketball_scaled.png">
+    </picture>
+    <div class="header__caption">
+      <h1 class="caption__title">Timothée Barattin</h1>
+      <h2 class="caption__subtitle">Industrial Engineer</h2>
+      <p id="caption__demographics">
+        y/o
+        <br>
+        Swiss & Italian
+      </p>
+      <script>
+        const ageMs = Date.now() - new Date(1992, 5, 26);
+        const ageDate = new Date(ageMs);
+        const age = Math.abs(ageDate.getUTCFullYear() - 1970);
+        var ageParagraph = document.getElementById('caption__demographics');
+        ageParagraph.innerHTML = age + ageParagraph.innerHTML;
+      </script>
+    </div>
   </header>
 
   <main class="main">
@@ -42,7 +45,8 @@
           <article class="details__article">
             <p class="article__description">
               I am an engineer with a MSc in Management, Technology and Economics. In parallel with my studies, I have taught myself IT and web development to pivot towards a career in software.
-              <br>
+            </p>
+            <p class="article__description">
               I strive for personal growth, I long to create, and I love to compete.
             </p>
           </article>
@@ -61,7 +65,7 @@
           </article>
         </details>
       </section>
-
+  
       <section class="main__section languages">
         <details class="section__details">
           <summary class="details__summary">
@@ -99,7 +103,7 @@
           </article>
         </details>
       </section>
-
+  
       <section class="main__section hobbies">
         <details class="section__details">
           <summary class="details__summary">
@@ -121,125 +125,122 @@
       </section>
     </aside>
 
-    <section class="main__section experience">
-      <details class="section__details">
-        <summary class="details__summary">
-          <h2 class="details__title">Experience</h2>
-        </summary>
-
-        <article class="details__article">
-          <time class="article__time">July 2019 - Today</time>
-          <p class="article__role">
-            <mark class="article__title">Full-Stack JavaScript Developer</mark>
-            @ Hiberus Tecnología
-          </p>
-          <p class="article__description">
-            <ul>
-              <li>Develop full-stack applications for customers in the industry</li>
-              <li>Work inside multiple teams on different projects at once</li>
-              <li>Present new developments to clients and gather feedback</li>
+    <div class="main__center">
+      <section class="main__section experience">
+        <details class="section__details">
+          <summary class="details__summary">
+            <h2 class="details__title">Experience</h2>
+          </summary>
+  
+          <article class="details__article">
+            <time class="article__time">July 2019 - Today</time>
+            <p class="article__role">
+              <mark class="article__title">Full-Stack JavaScript Developer</mark>
+              @ Hiberus Tecnología
+            </p>
+            <ul class="article__description">
+              <li>Develop full-stack applications for customers in the industry.</li>
+              <li>Work inside multiple teams on different projects at once.</li>
+              <li>Present new developments to clients and gather feedback.</li>
+              <li><mark class="description__subtitle">Technologies</mark> Angular, Ionic, NestJS, TypeORM, Sequelize, MySQL</li>
             </ul>
-            <mark class="description__subtitle">Technologies</mark>
-            Angular, Ionic, NestJS, TypeORM, Sequelize, MySQL
-          </p>
-        </article>
-
-        <article class="details__article">
-          <time class="article__time">September 2016 - September 2018 (2 years)</time>
-          <p class="article__role">
-            <mark class="article__title">Marketing</mark>
-            @ ETH Entrepreneur Club
-          </p>
-          <p class="article__description">
-            <ul>
-              <li>Lead the marketing team (6 people) and coordinate our marketing effort across digital and physical channels</li>
-              <li>Build the club's brand by raising awareness and fostering interactions online and offline</li>
-              <li>Generate applications for our events (>1000 applications semester) and work closely with the events and operations teams</li>
+          </article>
+  
+          <article class="details__article">
+            <time class="article__time">September 2016 - September 2018 (2 years)</time>
+            <p class="article__role">
+              <mark class="article__title">Marketing</mark>
+              @ ETH Entrepreneur Club
+            </p>
+            <ul class="article__description">
+              <li>Lead the marketing team (6 people) and coordinate our marketing effort across digital and physical channels.</li>
+              <li>Build the club's brand by raising awareness and fostering interactions online and offline.</li>
+              <li>Generate applications for our events (>1000 applications semester) and work closely with the events and operations teams.</li>
             </ul>
-          </p>
-        </article>
-      </details>
-    </section>
-
-    <section class="main__section projects">
-      <details class="section__details">
-        <summary class="details__summary">
-          <h2 class="details__title">Projects</h2>
-        </summary>
-
-        <article class="details__article">
-          <time class="article__time">July 2020 - September 2020</time>
-          <p class="article__role">
-            <mark class="article__title">Online Survey</mark>
-            w/ Auto-ID Labs & Diabetes Center Berne
-          </p>
-          <p class="article__description">
-            Develop an online survey for diabetes patients.
-            <br>
-            <mark class="description__subtitle">Technologies</mark>
-            Angular 10, Firebase (Authentication, Firestore, Cloud Functions, Hosting)
-          </p>
-        </article>
-
-        <article class="details__article">
-          <time class="article__time">February 2018 - December 2019</time>
-          <p class="article__role">
-            <mark class="article__title">Mobile App</mark>
-            w/ Auto-ID Labs & Swiss Society for Nutrition
-          </p>
-          <p class="article__description">
-            Develop BetterChoice, a mobile health application providing tailored and customizable feedback on grocery shopping to consumers.
-            <br>
-            <mark class="description__subtitle">Technologies</mark>
-            Ionic 4, Angular 7, Firebase (Authentication, Firestore)
-          </p>
-        </article>
-      </details>
-    </section>
-
-    <section class="main__section education">
-      <details class="section__details">
-        <summary class="details__summary">
-          <h2 class="details__title">Education</h2>
-        </summary>
-
-        <article class="details__article">
-          <time class="article__time">September 2015 - September 2019</time>
-          <p class="article__role">
-            <mark class="article__title">Management, Technology and Economics</mark>
-            @ ETH Zurich
-          </p>
-          <p class="article__description">
-            Interdisciplinary Master program for engineers and scientists at the Swiss Federal Institute of Technology in Zurich, graduated September 2019.
-          </p>
-        </article>
-
-        <article class="details__article">
-          <time class="article__time">September 2016 - December 2019</time>
-          <p class="article__role">
-            <mark class="article__title">Climate-KIC Master Programme</mark>
-            @ ETH Zurich
-          </p>
-          <p class="article__description">
-            European Master program to forge the next generation of cleantech entrepreneurs and climate innovators.
-          </p>
-        </article>
-
-        <article class="details__article">
-          <time class="article__time">September 2012 - July 2015</time>
-          <p class="article__role">
-            <mark class="article__title">Mechanical Engineering</mark>
-            @ EPFL
-          </p>
-          <p class="article__description">
-            Bachelor degree in Mechanical Engineering from the Swiss Federal Institute of Technology in Lausanne, graduated August 2015.
-            <br>
-            <mark class="description__subtitle">Exchange year</mark>
-            @ Politecnico di Torino in Italy (2014 - 2015).
-          </p>
-        </article>
-      </details>
-    </section>
+          </article>
+        </details>
+      </section>
+  
+      <section class="main__section projects">
+        <details class="section__details">
+          <summary class="details__summary">
+            <h2 class="details__title">Projects</h2>
+          </summary>
+  
+          <article class="details__article">
+            <time class="article__time">July 2020 - September 2020</time>
+            <p class="article__role">
+              <mark class="article__title">Online Survey</mark>
+              w/ Auto-ID Labs & Diabetes Center Berne
+            </p>
+            <p class="article__description">
+              Develop an online survey for diabetes patients.
+              <br>
+              <mark class="description__subtitle">Technologies</mark>
+              Angular 10, Firebase (Authentication, Firestore, Cloud Functions, Hosting)
+            </p>
+          </article>
+  
+          <article class="details__article">
+            <time class="article__time">February 2018 - December 2019</time>
+            <p class="article__role">
+              <mark class="article__title">Mobile App</mark>
+              w/ Auto-ID Labs & Swiss Society for Nutrition
+            </p>
+            <p class="article__description">
+              Develop BetterChoice, a mobile health application providing tailored and customizable feedback on grocery shopping to consumers.
+              <br>
+              <mark class="description__subtitle">Technologies</mark>
+              Ionic 4, Angular 7, Firebase (Authentication, Firestore)
+            </p>
+          </article>
+        </details>
+      </section>
+  
+      <section class="main__section education">
+        <details class="section__details">
+          <summary class="details__summary">
+            <h2 class="details__title">Education</h2>
+          </summary>
+  
+          <article class="details__article">
+            <time class="article__time">September 2015 - September 2019</time>
+            <p class="article__role">
+              <mark class="article__title">Management, Technology and Economics</mark>
+              @ ETH Zurich
+            </p>
+            <p class="article__description">
+              Interdisciplinary Master program for engineers and scientists at the Swiss Federal Institute of Technology in Zurich, graduated September 2019.
+            </p>
+          </article>
+  
+          <article class="details__article">
+            <time class="article__time">September 2016 - December 2019</time>
+            <p class="article__role">
+              <mark class="article__title">Climate-KIC Master Programme</mark>
+              @ ETH Zurich
+            </p>
+            <p class="article__description">
+              European Master program to forge the next generation of cleantech entrepreneurs and climate innovators.
+            </p>
+          </article>
+  
+          <article class="details__article">
+            <time class="article__time">September 2012 - July 2015</time>
+            <p class="article__role">
+              <mark class="article__title">Mechanical Engineering</mark>
+              @ EPFL
+            </p>
+            <p class="article__description">
+              Bachelor degree in Mechanical Engineering from the Swiss Federal Institute of Technology in Lausanne, graduated August 2015.
+              <br>
+              <mark class="description__subtitle">Exchange year</mark>
+              @ Politecnico di Torino in Italy (2014 - 2015).
+            </p>
+          </article>
+        </details>
+      </section>
+    </div>
   </main>
 
   <footer class="footer">
