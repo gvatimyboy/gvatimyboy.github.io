@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet"></link>
+  <link href="css/mobile.css" rel="stylesheet" media="(max-width: 649px)"></link>
 </head>
 
 <body>
@@ -238,6 +239,19 @@
       © Timothée Barattin 2020
     </div>
   </footer>
+
+  <script>
+    const mediaQuery = window.matchMedia('(min-width: 650px)');
+    if (mediaQuery.matches) {
+      const detailsEl = document.getElementsByClassName('section__details');
+      for (var i = 0; i < detailsEl.length; i++) {
+        detailsEl.item(i).open = true;
+        detailsEl.item(i).addEventListener('click', function(e) {
+          e.preventDefault();
+        });
+      }
+    }
+  </script>
 </body>
 </html>
   
