@@ -1,6 +1,5 @@
 body {
   margin: 0.66em;
-  height: calc(100vh - 16px);
 }
 .header {
   flex-flow: column nowrap;

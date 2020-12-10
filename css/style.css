@@ -1,12 +1,16 @@
+html {
+  height: 100%;
+  display: flex;
+}
 body {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 18px;
-  font-weight: 300;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  height: calc(100vh - 16px);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  flex-grow: 1;
 }
 p {
   margin-block-start: 0.33em;
@@ -18,8 +22,12 @@ p {
 .footer {
   width: 100%;
   max-width: 900px;
+  flex-shrink: 0;
 }
-
+.header,
+.footer {
+  flex-grow: 0;
+}
 .header,
 .main {
   display: flex;
