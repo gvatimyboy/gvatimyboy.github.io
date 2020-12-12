@@ -1,32 +1,6 @@
 body {
   margin: 0.66em;
 }
-details[open] {
-  transition-property: height;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-}
-details[open] article {
-  animation-name: toggle;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-}
-details:not([open]) article {
-  animation-name: toggle;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
-}
-@keyframes toggle {
-  from {
-    opacity: 0;
-    transform: scaleY(0);
-  }
-  to {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-}
 
 .header {
   flex-flow: column nowrap;
