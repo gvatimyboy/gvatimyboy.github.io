@@ -158,6 +158,27 @@
               <li>Generate applications for our events (>1000 applications semester) and work closely with the events and operations teams.</li>
             </ul>
           </article>
+
+          <div class="details__more experience" style="display: none;">
+            <article class="details__article">
+              <time class="article__time">March 2017 - August 2017 (6 months)</time>
+              <p class="article__role">
+                <mark class="article__title">Engineering Intern</mark>
+                @ RUAG Space
+              </p>
+              <ul class="article__description">
+                <li>Support the Mechanism Product Unit engineers on multiple projects.</li>
+                <li>Build models using software tools to simulate and assess mechanisms' testing procedures.</li>
+                <li>Post-process, analyze and visualize data for making reports, client presentations and articles.</li>
+              </ul>
+            </article>
+          </div>
+          
+          <button
+          class="details__button button button-more"
+          onclick="toggleMore(this, 'experience')">
+            See More
+          </button>
         </details>
       </section>
   
@@ -251,6 +272,7 @@
 
   <script>
     const detailsEl = document.getElementsByClassName('section__details');
+    const summaryEl = document.getElementsByClassName('details__summary');
     let windowWidthMediaQuery = window.matchMedia('(min-width: 650px)');
     function toggleDetailsElements(elements, open) {
       for (var i = 0; i < elements.length; i++) {
@@ -262,8 +284,8 @@
       toggleDetailsElements(detailsEl, true);
     }
     
-    for (var i = 0; i < detailsEl.length; i++) {
-      detailsEl.item(i).addEventListener('click', function(e) {
+    for (var i = 0; i < summaryEl.length; i++) {
+      summaryEl.item(i).addEventListener('click', function (e) {
         if (windowWidthMediaQuery.matches) {
           e.preventDefault();
         } else {
