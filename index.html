@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="This is a simple static website built with HTML, CSS and JavaScript that features my education, experience and projects portfolio.">
+  <meta name="description"
+    content="This is a simple static website built with HTML, CSS and JavaScript that features my education, experience and projects portfolio.">
   <meta name="author" content="Timothée Barattin">
   <title>Timothée Barattin's Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap"
+    rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/mobile.css" rel="stylesheet" media="(max-width: 649px)">
 </head>
@@ -16,12 +20,13 @@
 <body>
   <header class="header">
     <picture class="header__picture">
-      <source media="(min-width: 650px)" srcset="assets/images/Tim@SSD_150.webp 1x, assets/images/Tim@SSD_300.webp 2x, assets/images/Tim@SSD_450.webp 3x">
+      <source media="(min-width: 650px)"
+        srcset="assets/images/Tim@SSD_150.webp 1x, assets/images/Tim@SSD_300.webp 2x, assets/images/Tim@SSD_450.webp 3x">
       <img class="picture__image" src="assets/images/Tim@SSD_450.webp">
     </picture>
     <div class="header__caption">
       <h1 class="caption__title">Timothée Barattin</h1>
-      <h2 class="caption__subtitle">Industrial Engineer</h2>
+      <h2 class="caption__subtitle">Software Engineer</h2>
       <p id="caption__demographics">
         y/o
         <br>
@@ -46,15 +51,20 @@
           </summary>
           <article class="details__article">
             <p class="article__description">
-              I am an engineer with a MSc in Management, Technology and Economics. In parallel with my studies, I have taught myself IT and web development to pivot towards a career in software.
+              I am a versatile engineer and self-taught developer. Along with my
+              engineering and management studies I have taught myself IT and web
+              development to pivot towards a career in software engineering. I
+              love to learn new stuff and build useful things!
             </p>
             <p class="article__description">
-              I strive for personal growth, I long to create, and I love to compete.
+              As a full-stack software engineer, I have built modern web and
+              mobile applications as well as APIs for public organisations,
+              private companies and individual customers.
             </p>
           </article>
         </details>
       </section>
-      
+
       <section class="main__section skills">
         <details class="section__details">
           <summary class="details__summary">
@@ -63,20 +73,25 @@
           <article class="details__article">
             <p class="article__description">
               <mark class="description__subtitle">Frontend</mark>
-              HTML, CSS, JavaScript, TypeScript, Angular, Ionic
+              HTML, CSS, JavaScript, TypeScript, Angular, Ionic, React,
+              Bootstrap
             </p>
             <p class="article__description">
               <mark class="description__subtitle">Backend</mark>
-              NodeJS, NestJS, Firebase, TypeORM, Sequelize
+              Spring Boot, NestJS, Firebase
             </p>
             <p class="article__description">
               <mark class="description__subtitle">Database</mark>
-              MySQL, Firestore
+              MySQL, PostgreSQL, Oracle, Firestore, Redis
+            </p>
+            <p class="article__description">
+              <mark class="description__subtitle">Other</mark>
+              Jenkins, GitLab CI, Bitbucket CI, Docker, Kubernetes, AWS
             </p>
           </article>
         </details>
       </section>
-  
+
       <section class="main__section languages">
         <details class="section__details">
           <summary class="details__summary">
@@ -105,7 +120,7 @@
             </p>
         </details>
       </section>
-  
+
       <section class="main__section hobbies">
         <details class="section__details">
           <summary class="details__summary">
@@ -131,110 +146,170 @@
           <summary class="details__summary">
             <h2 class="details__title">Experience</h2>
           </summary>
-  
+
           <article class="details__article">
-            <time class="article__time">July 2019 - Today</time>
+            <time class="article__time">January 2022 - Today</time>
             <p class="article__role">
-              <mark class="article__title">Full-Stack JavaScript Developer</mark>
+              <mark class="article__title">Dev/Ops Engineer</mark>
+              @ adesso Suisse SA
+            </p>
+            <ul class="article__description">
+              <li>Build and maintain customer-facing applications for billing in
+                the telecom industry.</li>
+              <li>Work in coordination with multiple teams responsible for
+                inter-dependent products.</li>
+              <li>Monitor day-to-day operations.</li>
+              <li><mark class="description__subtitle">Technologies</mark> Spring
+                Boot, Angular, React, JPA, Hibernate, jOOQ, PostgreSQL, Jenkins,
+                GitLab CI</li>
+            </ul>
+          </article>
+
+          <article class="details__article">
+            <time class="article__time">July 2019 - December 2021</time>
+            <p class="article__role">
+              <mark class="article__title">Full-Stack JavaScript
+                Developer</mark>
               @ Hiberus Tecnología
             </p>
             <ul class="article__description">
-              <li>Develop full-stack applications for customers in the industry.</li>
+              <li>Develop full-stack applications for customers in the industry.
+              </li>
               <li>Work inside multiple teams on different projects at once.</li>
               <li>Present new developments to clients and gather feedback.</li>
-              <li><mark class="description__subtitle">Technologies</mark> Angular, Ionic, NestJS, TypeORM, Sequelize, MySQL</li>
-            </ul>
-          </article>
-  
-          <article class="details__article">
-            <time class="article__time">September 2016 - September 2018 (2 years)</time>
-            <p class="article__role">
-              <mark class="article__title">Marketing</mark>
-              @ ETH Entrepreneur Club
-            </p>
-            <ul class="article__description">
-              <li>Lead the marketing team (6 people) and coordinate our marketing effort across digital and physical channels.</li>
-              <li>Build the club's brand by raising awareness and fostering interactions online and offline.</li>
-              <li>Generate applications for our events (>1000 applications semester) and work closely with the events and operations teams.</li>
+              <li><mark class="description__subtitle">Technologies</mark>
+                Angular, Ionic, NestJS, TypeORM, Sequelize, MySQL, Oracle</li>
             </ul>
           </article>
 
           <div class="details__more experience" style="display: none;">
             <article class="details__article">
-              <time class="article__time">March 2017 - August 2017 (6 months)</time>
+              <time class="article__time">September 2016 - September 2018 (2
+                years)</time>
+              <p class="article__role">
+                <mark class="article__title">Marketing</mark>
+                @ ETH Entrepreneur Club
+              </p>
+              <ul class="article__description">
+                <li>Lead the marketing team (6 people) and coordinate our
+                  marketing effort across digital and physical channels.</li>
+                <li>Build the club's brand by raising awareness and fostering
+                  interactions online and offline.</li>
+                <li>Generate applications for our events (>1000 applications
+                  semester) and work closely with the events and operations
+                  teams.</li>
+              </ul>
+            </article>
+
+            <article class="details__article">
+              <time class="article__time">March 2017 - August 2017 (6
+                months)</time>
               <p class="article__role">
                 <mark class="article__title">Engineering Intern</mark>
                 @ RUAG Space
               </p>
               <ul class="article__description">
-                <li>Support the Mechanism Product Unit engineers on multiple projects.</li>
-                <li>Build models using software tools to simulate and assess mechanisms' testing procedures.</li>
-                <li>Post-process, analyze and visualize data for making reports, client presentations and articles.</li>
+                <li>Support the Mechanism Product Unit engineers on multiple
+                  projects.</li>
+                <li>Build models using software tools to simulate and assess
+                  mechanisms' testing procedures.</li>
+                <li>Post-process, analyze and visualize data for making reports,
+                  client presentations and articles.</li>
               </ul>
             </article>
           </div>
-          
-          <button
-          class="details__button button button-more"
-          onclick="toggleMore(this, 'experience')">
+
+          <button class="details__button button button-more"
+            onclick="toggleMore(this, 'experience')">
             See More
           </button>
         </details>
       </section>
-  
+
       <section class="main__section projects">
         <details class="section__details">
           <summary class="details__summary">
             <h2 class="details__title">Projects</h2>
           </summary>
-  
+
+          <article class="details__article">
+            <time class="article__time">April 2021 - November 2021</time>
+            <p class="article__role">
+              <mark class="article__title">Brainfood2</mark>
+              w/ Auto-ID Labs & Inselspital Bern
+            </p>
+            <p class="article__description">
+              Develop a web app to track patients’ post-surgery diet, featuring
+              automatic emailing, progress tracking, 3rd party services
+              intergration, and admin panel.
+              <br>
+              <mark class="description__subtitle">Technologies</mark>
+              Angular 10, Firebase (Authentication, Firestore, Cloud Functions,
+              Hosting)
+            </p>
+          </article>
+
           <article class="details__article">
             <time class="article__time">July 2020 - September 2020</time>
             <p class="article__role">
-              <mark class="article__title">Online Survey</mark>
+              <mark class="article__title">Food Literacy Survey</mark>
               w/ Auto-ID Labs & Diabetes Center Berne
             </p>
             <p class="article__description">
-              Develop an online survey for diabetes patients.
+              Develop a web app to survey diabetes patients, featuring
+              randomized questions, automatic emailing, and admin panel.
               <br>
               <mark class="description__subtitle">Technologies</mark>
-              Angular 10, Firebase (Authentication, Firestore, Cloud Functions, Hosting)
+              Angular 10, Firebase (Authentication, Firestore, Cloud Functions,
+              Hosting)
             </p>
           </article>
-  
-          <article class="details__article">
-            <time class="article__time">February 2018 - December 2019</time>
-            <p class="article__role">
-              <mark class="article__title">Mobile App</mark>
-              w/ Auto-ID Labs & Swiss Society for Nutrition
-            </p>
-            <p class="article__description">
-              Develop BetterChoice, a mobile health application providing tailored and customizable feedback on grocery shopping to consumers.
-              <br>
-              <mark class="description__subtitle">Technologies</mark>
-              Ionic 4, Angular 7, Firebase (Authentication, Firestore)
-            </p>
-          </article>
+
+          <div class="details__more projects" style="display: none;">
+            <article class="details__article">
+              <time class="article__time">February 2018 - December 2019</time>
+              <p class="article__role">
+                <mark class="article__title">Mobile App</mark>
+                w/ Auto-ID Labs & Swiss Society for Nutrition
+              </p>
+              <p class="article__description">
+                Develop BetterChoice, a mobile health application providing
+                tailored and customizable feedback on grocery shopping to
+                consumers.
+                <br>
+                <mark class="description__subtitle">Technologies</mark>
+                Ionic 4, Angular 7, Firebase (Authentication, Firestore)
+              </p>
+            </article>
+          </div>
+
+          <button class="details__button button button-more"
+            onclick="toggleMore(this, 'projects')">
+            See More
+          </button>
         </details>
       </section>
-  
+
       <section class="main__section education">
         <details class="section__details">
           <summary class="details__summary">
             <h2 class="details__title">Education</h2>
           </summary>
-  
+
           <article class="details__article">
             <time class="article__time">September 2015 - September 2019</time>
             <p class="article__role">
-              <mark class="article__title">Management, Technology and Economics</mark>
+              <mark class="article__title">Management, Technology and
+                Economics</mark>
               @ ETH Zurich
             </p>
             <p class="article__description">
-              Interdisciplinary Master program for engineers and scientists at the Swiss Federal Institute of Technology in Zurich, graduated September 2019.
+              Interdisciplinary Master program for engineers and scientists at
+              the Swiss Federal Institute of Technology in Zurich, graduated
+              September 2019.
             </p>
           </article>
-  
+
           <article class="details__article">
             <time class="article__time">September 2016 - December 2019</time>
             <p class="article__role">
@@ -242,10 +317,11 @@
               @ ETH Zurich
             </p>
             <p class="article__description">
-              European Master program to forge the next generation of cleantech entrepreneurs and climate innovators.
+              European Master program to forge the next generation of cleantech
+              entrepreneurs and climate innovators.
             </p>
           </article>
-  
+
           <article class="details__article">
             <time class="article__time">September 2012 - July 2015</time>
             <p class="article__role">
@@ -253,7 +329,8 @@
               @ EPFL
             </p>
             <p class="article__description">
-              Bachelor degree in Mechanical Engineering from the Swiss Federal Institute of Technology in Lausanne, graduated August 2015.
+              Bachelor degree in Mechanical Engineering from the Swiss Federal
+              Institute of Technology in Lausanne, graduated August 2015.
               <br>
               <mark class="description__subtitle">Exchange year</mark>
               @ Politecnico di Torino in Italy (2014 - 2015).
@@ -266,7 +343,7 @@
 
   <footer class="footer">
     <div class="footer__copyrights">
-      © Timothée Barattin 2020
+      © Timothée Barattin 2025
     </div>
   </footer>
 
@@ -283,7 +360,7 @@
     if (windowWidthMediaQuery.matches) {
       toggleDetailsElements(detailsEl, true);
     }
-    
+
     for (var i = 0; i < summaryEl.length; i++) {
       summaryEl.item(i).addEventListener('click', function (e) {
         if (windowWidthMediaQuery.matches) {
@@ -296,4 +373,5 @@
   </script>
   <script async src="portfolio.js"></script>
 </body>
+
 </html>
