@@ -31,3 +31,7 @@ body {
   padding-bottom: 0;
   border-bottom: none;
 }
+
+.flex-item {
+  flex: 0 0 100%;
+}

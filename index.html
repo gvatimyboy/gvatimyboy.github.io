@@ -15,6 +15,15 @@
     rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/mobile.css" rel="stylesheet" media="(max-width: 649px)">
+
+  <script>
+    function getYearsToDate(date) {
+      const unixTimeToDateMs = Date.now() - date;
+      const unixTimeToDate = new Date(unixTimeToDateMs);
+      const ytd = Math.abs(unixTimeToDate.getUTCFullYear() - 1970);
+      return ytd;
+    }
+  </script>
 </head>
 
 <body>
@@ -26,19 +35,46 @@
     </picture>
     <div class="header__caption">
       <h1 class="caption__title">Timothée Barattin</h1>
-      <h2 class="caption__subtitle">Software Engineer</h2>
-      <p id="caption__demographics">
-        y/o
-        <br>
-        Swiss & Italian
-      </p>
+      <div>
+        <h2 class="caption__subtitle">
+          Software Engineer
+          <span class="subtitle__note" id="subtitle__experience">
+             years of experience
+          </span>
+          <script>
+            const experience = getYearsToDate(new Date(2018, 1, 1));
+            var experienceParagraph = document.getElementById('subtitle__experience');
+            experienceParagraph.innerHTML = experience + experienceParagraph.innerHTML;
+          </script>
+        </h2>
+      </div>
+      <div class="flex-row">
+        <div class="flex-item" id="caption__age">
+          y/o
+        </div>
       <script>
-        const ageMs = Date.now() - new Date(1992, 5, 26);
-        const ageDate = new Date(ageMs);
-        const age = Math.abs(ageDate.getUTCFullYear() - 1970);
-        var ageParagraph = document.getElementById('caption__demographics');
+          const age = getYearsToDate(new Date(1992, 5, 26));
+          var ageParagraph = document.getElementById('caption__age');
         ageParagraph.innerHTML = age + ageParagraph.innerHTML;
       </script>
+        <div class="flex-item">
+          [phone number]
+        </div>
+      </div>
+      <div class="flex-row">
+        <div class="flex-item">
+          Swiss & Italian
+        </div>
+        <div class="flex-item">
+          [email]
+        </div>
+      </div>
+      <div class="flex-row">
+        <div class="flex-item"></div>
+        <div class="flex-item">
+          [home address]
+        </div>
+      </div>
     </div>
   </header>
 
@@ -78,11 +114,11 @@
             </p>
             <p class="article__description">
               <mark class="description__subtitle">Backend</mark>
-              Spring Boot, NestJS, Firebase
+              Spring Boot, NodeJS (NestJS), Firebase (GCP), AWS Lambda
             </p>
             <p class="article__description">
               <mark class="description__subtitle">Database</mark>
-              MySQL, PostgreSQL, Oracle, Firestore, Redis
+              MySQL, PostgreSQL, Oracle, Firestore (NoSQL), Redis
             </p>
             <p class="article__description">
               <mark class="description__subtitle">Other</mark>
@@ -107,15 +143,15 @@
               Full professional proficiency
             </p>
             <p class="article__description">
+              <mark class="description__subtitle">German</mark>
+              Professional working proficiency
+            </p>
+            <p class="article__description">
               <mark class="description__subtitle">Italian</mark>
               Professional working proficiency
             </p>
             <p class="article__description">
               <mark class="description__subtitle">Spanish</mark>
-              Professional working proficiency
-            </p>
-            <p class="article__description">
-              <mark class="description__subtitle">German</mark>
               Professional working proficiency
             </p>
         </details>
@@ -129,11 +165,11 @@
           <article class="details__article">
             <p class="article__description">
               <mark class="description__subtitle">Sport</mark>
-              Basketball, Snowboard, Tennis Table, Mountain Bike, Sailing, Golf
+              Resistance Training, Basketball, Snowboard, Golf
             </p>
             <p class="article__description">
               <mark class="description__subtitle">Music</mark>
-              Guitar, Salsa Dancing, Music Productions, Drums
+              Guitar, Salsa Dancing
             </p>
           </article>
         </details>
@@ -149,6 +185,7 @@
 
           <article class="details__article">
             <time class="article__time">January 2022 - Today</time>
+            <span class="article__duration" id="adesso"></span>
             <p class="article__role">
               <mark class="article__title">Dev/Ops Engineer</mark>
               @ adesso Suisse SA
@@ -160,13 +197,14 @@
                 inter-dependent products.</li>
               <li>Monitor day-to-day operations.</li>
               <li><mark class="description__subtitle">Technologies</mark> Spring
-                Boot, Angular, React, JPA, Hibernate, jOOQ, PostgreSQL, Jenkins,
-                GitLab CI</li>
+                Boot, Angular 12+, React, JPA, Hibernate, jOOQ, PostgreSQL, Jenkins,
+                GitLab CI, Docker</li>
             </ul>
           </article>
 
           <article class="details__article">
             <time class="article__time">July 2019 - December 2021</time>
+            <span class="article__duration" id="hiberus"></span>
             <p class="article__role">
               <mark class="article__title">Full-Stack JavaScript
                 Developer</mark>
@@ -178,7 +216,7 @@
               <li>Work inside multiple teams on different projects at once.</li>
               <li>Present new developments to clients and gather feedback.</li>
               <li><mark class="description__subtitle">Technologies</mark>
-                Angular, Ionic, NestJS, TypeORM, Sequelize, MySQL, Oracle</li>
+                Angular 12, Ionic, NestJS, TypeORM, Sequelize, MySQL, Oracle</li>
             </ul>
           </article>
 
@@ -234,6 +272,7 @@
 
           <article class="details__article">
             <time class="article__time">April 2021 - November 2021</time>
+            <span class="article__duration" id="brainfood-2"></span>
             <p class="article__role">
               <mark class="article__title">Brainfood2</mark>
               w/ Auto-ID Labs & Inselspital Bern
@@ -251,6 +290,7 @@
 
           <article class="details__article">
             <time class="article__time">July 2020 - September 2020</time>
+            <span class="article__duration" id="food-literacy-survey"></span>
             <p class="article__role">
               <mark class="article__title">Food Literacy Survey</mark>
               w/ Auto-ID Labs & Diabetes Center Berne
@@ -268,8 +308,9 @@
           <div class="details__more projects" style="display: none;">
             <article class="details__article">
               <time class="article__time">February 2018 - December 2019</time>
+              <span class="article__duration" id="betterchoice"></span>
               <p class="article__role">
-                <mark class="article__title">Mobile App</mark>
+                <mark class="article__title">BetterChoice</mark>
                 w/ Auto-ID Labs & Swiss Society for Nutrition
               </p>
               <p class="article__description">
@@ -298,6 +339,7 @@
 
           <article class="details__article">
             <time class="article__time">September 2015 - September 2019</time>
+            <span class="article__duration" id="eth"></span>
             <p class="article__role">
               <mark class="article__title">Management, Technology and
                 Economics</mark>
@@ -312,6 +354,7 @@
 
           <article class="details__article">
             <time class="article__time">September 2016 - December 2019</time>
+            <span class="article__duration" id="climate-kic"></span>
             <p class="article__role">
               <mark class="article__title">Climate-KIC Master Programme</mark>
               @ ETH Zurich
@@ -324,6 +367,7 @@
 
           <article class="details__article">
             <time class="article__time">September 2012 - July 2015</time>
+            <span class="article__duration" id="epfl"></span>
             <p class="article__role">
               <mark class="article__title">Mechanical Engineering</mark>
               @ EPFL
@@ -370,6 +414,41 @@
         }
       });
     };
+  </script>
+  <script>
+    function getYearsAndMonthsDuration(startDate, endDate) {
+      let years = endDate.getFullYear() - startDate.getFullYear();
+      let months = endDate.getMonth() - startDate.getMonth();
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      const yearLabel = years === 1 ? "1 year" : `${years} years`;
+      const monthLabel = months === 1 ? "1 month" : `${months} months`;
+
+      if (years > 0 && months > 0) {
+        return `${yearLabel}, ${monthLabel}`;
+      } else if (years > 0) {
+        return yearLabel;
+      } else {
+        return monthLabel;
+      }
+    }
+
+    // experiences
+    var adessoEl = document.getElementById('adesso');
+    adessoEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2022, 0, 1), new Date())})`;
+    var hiberusEl = document.getElementById('hiberus');
+    hiberusEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2019, 8, 1), new Date(2021, 0, 1))})`;
+    // projects
+    var brainfood2El = document.getElementById('brainfood-2');
+    brainfood2El.innerHTML = `(${getYearsAndMonthsDuration(new Date(2021, 3, 1), new Date(2021, 10, 1))})`;
+    var foodLiteracySurveyEl = document.getElementById('food-literacy-survey');
+    foodLiteracySurveyEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2020, 6, 1), new Date(2020, 8, 1))})`;
+    var betterChoiceEl = document.getElementById('betterchoice');
+    betterChoiceEl.innerHTML = `(${getYearsAndMonthsDuration(new Date(2018, 1, 1), new Date(2019, 11, 1))})`;
   </script>
   <script async src="portfolio.js"></script>
 </body>
