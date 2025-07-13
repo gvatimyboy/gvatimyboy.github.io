@@ -122,11 +122,11 @@ summary::-webkit-details-marker {
 }
 .article__role {
   margin-block-start: 0;
+  font-weight: 500;
 }
 .article__title {
   background-color: transparent;
   color: red;
-  font-weight: 500;
 }
 .article__description {
   text-align: justify;
@@ -140,6 +140,7 @@ ul.article__description {
 .description__subtitle {
   background-color: transparent;
   color: red;
+  font-weight: 500;
 }
 
 .footer__copyrights {
