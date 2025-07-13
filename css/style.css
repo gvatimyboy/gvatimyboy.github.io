@@ -115,10 +115,10 @@ summary::-webkit-details-marker {
 }
 .article__time {
   font-style: italic;
-}
-.article__duration {
-  font-style: italic;
-  font-size: 0.8rem;
+
+  .time__duration {
+    font-size: 0.8rem;
+  }
 }
 .article__role {
   margin-block-start: 0;
